@@ -1,0 +1,40 @@
+
+---
+
+## Файл: `.gitignore`
+
+```gitignore
+# Database
+*.db
+
+# Backups
+backup_*.zip
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+*.spec
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Temp and test files
+*_old.py
+*_backup.py
+test_*.py
+*.bak
+
+# System files
+Thumbs.db
+.DS_Store
