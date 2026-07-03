@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>byBAZZ | b2bcrm — Профессиональная CRM для B2B</title>
+    <style>
+        :root { 
+            --bg: #F8FAFC; 
+            --card-bg: #FFFFFF; 
+            --text: #1E293B; 
+            --accent: #2563EB; 
+            --border: #E2E8F0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+        
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #0F172A; }
+        h3 { margin: 20px 0 10px 0; color: var(--accent); }
+
+/* Контейнер плашек */
+.screenshot-previews { display: flex; gap: 20px; justify-content: center; margin: 40px 0; }
+
+.preview-item { 
+    position: relative; 
+    width: 220px; height: 130px; cursor: pointer; border-radius: 12px; 
+    overflow: hidden; border: 1px solid var(--border); 
+}
+
+.preview-item img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Лайтбокс: скрыт и не реагирует на мышь */
+.full-view { 
+    display: none; 
+    position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.9); z-index: 9999; 
+    justify-content: center; align-items: center;
+    pointer-events: none; /* Ключевое свойство: мышь "проходит сквозь" лайтбокс */
+}
+
+/* Показ лайтбокса ТОЛЬКО при наведении на родительский блок .preview-item */
+.preview-item:hover .full-view { 
+    display: flex; 
+}
+
+.full-view img { 
+    max-width: 85%; max-height: 85%; border-radius: 8px; 
+}
+
+        /* Кнопки */
+        .btn-group { display: flex; justify-content: center; gap: 20px; margin-top: 40px; }
+        .btn { padding: 14px 28px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: 0.2s; }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-secondary { background: white; border: 1px solid var(--border); color: var(--text); }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        footer { text-align: center; padding: 40px; color: #64748B; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section id="crm">
+            <h1>b2bcrm — локальная CRM для B2B</h1>
+            <p><strong>b2bcrm</strong> — это профессиональный инструмент для управления клиентской базой. Система разработана для работы без интернета, гарантирует полную конфиденциальность данных и не требует сложных настроек инфраструктуры.</p>
+            
+            <h3>Возможности системы:</h3>
+            <ul>
+                <li><strong>Интеллектуальный учёт:</strong> Картотека с историей контактов и расширенным поиском.</li>
+                <li><strong>Контроль продаж:</strong> Мониторинг SLA, планирование встреч и отслеживание статусов.</li>
+                <li><strong>Аналитика и импорт:</strong> Автоматизированная загрузка данных из SuperSet, excel-таблиц и отчеты по воронке.</li>
+                <li><strong>Безопасность:</strong> Все данные хранятся локально на вашем компьютере и зашифрованы.</li>
+            </ul>
+
+            <div class="screenshot-previews">
+                <div class="preview-item"><img src="dashboard.jpg" alt="Дашборд"><div class="full-view"><img src="dashboard.jpg"></div></div>
+                <div class="preview-item"><img src="reports.jpg" alt="Рабочий стол"><div class="full-view"><img src="reports.jpg"></div></div>
+                <div class="preview-item"><img src="workspace.jpg" alt="Отчеты"><div class="full-view"><img src="workspace.jpg"></div></div>
+            </div>
+
+<div class="btn-group">
+                <a href="https://github.com/byBAZZ88/b2bcrm/releases/latest" class="btn btn-primary">Скачать b2bcrm v1.3.1</a>
+                <a href="https://github.com/byBAZZ88/b2bcrm/releases/latest" class="btn btn-primary">Скачать c GitHub</a>
+                <a href="Instruction_b2bcrm_v1.3.docx" class="btn btn-secondary">Инструкция</a>
+                <a href="https://github.com/byBAZZ88/b2bcrm/issues" class="btn btn-secondary">Обратная связь</a>
+            </div>
+        </section>
+
+        <section id="donate" style="margin-top: 80px; text-align: center;">
+            <h3>Поддержка разработки</h3>
+            <p style="font-size: 0.95rem;">Проект развивается как Open Source. Если приложение помогает вашему бизнесу, вы можете поддержать развитие:</p>
+            <p style="margin-top:15px; font-weight: bold; background: #EEE; display: inline-block; padding: 10px 20px; border-radius: 6px;">USDT TRC20: <code>TReJQc62X2S2ZCL1QRvwgj4pX2oyGKh2jE</code></p>
+            <p style="margin-top:15px; font-weight: bold; background: #EEE; display: inline-block; padding: 10px 20px; border-radius: 6px;">BTC: <code>bc1q3n3u9yx4f2843wa8errau2yd76r35u3m7ha86y</code></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 byBAZZ. Built for business. Designed for simplicity.</p>
+    </footer>
+
+</body>
+</html>
