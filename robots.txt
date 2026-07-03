@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bybazz88.github.io/b2bcrm/sitemap.xml
